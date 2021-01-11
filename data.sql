@@ -1,0 +1,10 @@
+CREATE TABLE users (
+    username TEXT PRIMARY KEY,
+    password TEXT NOT NULL,
+)
+
+CREATE TABLE todos (
+    id INTEGER PRIMARY KEY,
+    task TEXT NOT NULL
+    user TEXT NOT NULL REFERENCES users ON DELETE CASCADE 
+)
